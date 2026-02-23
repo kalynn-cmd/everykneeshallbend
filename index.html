@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Every Knee Shall Bend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="overlay">
+        <h1>Every Knee Shall Bend</h1>
+        <p>Supporting Catholic Churches in Restoring Communion Altar Rails</p>
+        <a href="#assistance" class="btn">Request Assistance</a>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <a href="#about">About</a>
+        <a href="#mission">Fostering Reverence</a>
+        <a href="#assistance">Request Assistance</a>
+    </div>
+</nav>
+
+<section class="section light" id="about">
+    <div class="content">
+        <h2>About Us</h2>
+        <p>
+            Every Knee Shall Bend exists to assist Catholic Churches that desire to restore or install communion altar rails.
+            We provide direct grant support to parishes seeking to deepen reverence within the Sacred Liturgy.
+        </p>
+    </div>
+</section>
+
+<section class="section dark" id="mission">
+    <div class="content">
+        <h2>Fostering Reverence</h2>
+        <p>
+            The restoration of altar rails addresses a growing desire for greater solemnity in worship.
+            Kneeling remains a profound and humble act of adoration before Our Lord.
+        </p>
+        <p>
+            Our grant is provided directly to the church to help support these sacred restoration efforts.
+        </p>
+    </div>
+</section>
+
+<section class="section light" id="assistance">
+    <div class="content">
+        <h2>Request Assistance</h2>
+        <p>Please complete the form below and we will respond to you promptly.</p>
+
+        <form action="sendmail.php" method="POST">
+
+    <div class="form-grid">
+        <input type="text" name="contactName" placeholder="Contact Name" required>
+        <input type="email" name="contactEmail" placeholder="Contact Email" required>
+        <input type="tel" name="contactPhone" placeholder="Contact Phone Number" required>
+        <input type="text" name="churchName" placeholder="Church Name" required>
+        <input type="text" name="churchAddress" placeholder="Church Address" required>
+        <input type="tel" name="churchPhone" placeholder="Church Phone Number" required>
+        <input type="text" name="pastorName" placeholder="Pastor's Name" required>
+
+        <select name="pastorApproval" required>
+            <option value="">Does the pastor approve of this request?</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+
+    <textarea name="bidsInfo" rows="5" placeholder="Provide information on the bids received" required></textarea>
+
+    <button type="submit">Submit Grant Request</button>
+</form>
+        </form>
+
+        <div id="confirmationMessage"></div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Every Knee Shall Bend | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
