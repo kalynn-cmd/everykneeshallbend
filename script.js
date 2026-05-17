@@ -11,10 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text())
+           .then(response => {
+    if (!response.ok) {
+        throw new Error("Network response was not successful.");
+    }
+    return response.text();
+})
+                if (!response.ok) {
+                    throw new Error("Network response was not successful.");
+                }
+                return response.text();
+            })
             .then(data => {
-                openGrantPopup();
-                grantForm.reset();
+    if (data.trim() === "success") {
+        openGrantPopup();
+        grantForm.reset();
+    } else {
+        alert("There was an error submitting the form. Please try again.");
+    }
+})
+                } else {
+                    alert("There was an error submitting the form. Please try again.");
+                }
             })
             .catch(error => {
                 alert("There was an error submitting the form. Please try again.");
@@ -24,9 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openGrantPopup() {
-    document.getElementById("grantPopup").style.display = "flex";
-}
+    const popup = document.getElementById("grantPopup");
 
+    if (popup) {
+        popup.style.display = "flex";
+    }
+}
+}
 function closeGrantPopup() {
-    document.getElementById("grantPopup").style.display = "none";
+    const popup = document.getElementById("grantPopup");
+
+    if (popup) {
+        popup.style.display = "none";
+    }
+}
+    }
 }
