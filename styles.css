@@ -21,7 +21,6 @@ body {
 /* ================================
    HERO SECTION
 ================================ */
-
 .hero {
     height: 95vh;
     background-image: url("./communion-altar-rails.png");
@@ -38,7 +37,6 @@ body {
     color: white;
 }
 
-/* Elegant dark + gold overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -70,7 +68,6 @@ body {
     font-style: italic;
 }
 
-/* Call-to-Action Button */
 .btn {
     display: inline-block;
     background: #c8a951;
@@ -91,7 +88,6 @@ body {
 /* ================================
    NAVIGATION
 ================================ */
-
 nav {
     background: #0f1a2b;
     padding: 18px 0;
@@ -123,7 +119,6 @@ nav a:hover {
 /* ================================
    SECTION STYLING
 ================================ */
-
 .section {
     padding: 100px 20px;
 }
@@ -150,7 +145,6 @@ h2 {
     position: relative;
 }
 
-/* Decorative gold line under headings */
 h2::after {
     content: "";
     display: block;
@@ -160,7 +154,6 @@ h2::after {
     margin: 15px auto 0;
 }
 
-/* Paragraph spacing */
 .content p {
     margin-bottom: 20px;
     font-size: 1.05rem;
@@ -169,7 +162,6 @@ h2::after {
 /* ================================
    FORM STYLING
 ================================ */
-
 form {
     margin-top: 40px;
 }
@@ -202,11 +194,9 @@ textarea:focus {
 
 textarea {
     width: 100%;
-    margin-bottom: 25px;
     resize: vertical;
 }
 
-/* Submit Button */
 button {
     background: #0f1a2b;
     color: white;
@@ -224,52 +214,14 @@ button:hover {
     color: #0f1a2b;
 }
 
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-    background: #0a1220;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
-@media (max-width: 900px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 70px 20px;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-}
 /* ================================
    GRANT FORM POP-UP
 ================================ */
-
 #assistance {
     position: relative;
 }
@@ -365,6 +317,47 @@ footer {
     background: #c8a951;
     color: #0f1a2b;
 }
-.popup-overlay {
-    display: none;
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background: #0a1220;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .popup-box {
+        padding: 25px;
+    }
 }
