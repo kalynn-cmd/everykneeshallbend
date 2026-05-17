@@ -266,64 +266,102 @@ footer {
         font-size: 2rem;
     }
 }
+/* ================================
+   GRANT FORM POP-UP
+================================ */
+
+#assistance {
+    position: relative;
+}
+
 .popup-overlay {
     display: none;
-    position: fixed;
-    z-index: 9999;
+    position: absolute;
+    z-index: 5000;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(15, 26, 43, 0.72);
 
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 60px 20px;
 }
 
 .popup-box {
-    background: #f8f4ec;
-    color: #2b2620;
+    background: #ffffff;
+    color: #2c2c2c;
     width: 90%;
-    max-width: 800px;
-    max-height: 85vh;
+    max-width: 850px;
+    max-height: 80vh;
     overflow-y: auto;
 
     padding: 40px;
-    border-radius: 12px;
-    border: 3px solid #8b6f3d;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    border: 3px solid #c8a951;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.45);
 
-    font-family: inherit;
-    line-height: 1.6;
+    font-family: "Georgia", serif;
+    line-height: 1.7;
     text-align: left;
 }
 
 .popup-box h2 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #6f5528;
-    font-family: inherit;
-    font-size: 2rem;
+    color: #0f1a2b;
+    font-family: "Georgia", serif;
+    font-size: 2.2rem;
     text-align: center;
+    letter-spacing: 1px;
+}
+
+.popup-box h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #c8a951;
+    margin: 15px auto 0;
+}
+
+.popup-box p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.popup-box ul {
+    list-style-type: disc;
+    margin: 15px 0 20px 35px;
+    padding-left: 20px;
+}
+
+.popup-box li {
+    display: list-item;
+    margin-bottom: 8px;
 }
 
 .popup-box button {
     display: block;
     margin: 30px auto 0;
-    padding: 12px 28px;
+    padding: 14px 40px;
 
-    background: #8b6f3d;
+    background: #0f1a2b;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 2px;
 
-    font-family: inherit;
-    font-size: 1rem;
+    font-family: "Georgia", serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .popup-box button:hover {
-    background: #6f5528;
+    background: #c8a951;
+    color: #0f1a2b;
 }
