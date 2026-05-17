@@ -39,9 +39,9 @@
     <div class="content">
         <h2>Fostering Reverence</h2>
         <p>
-            The restoration of altar rails addresses a growing desire for greater solemnity in worship.
-            Kneeling remains a profound and humble act of adoration before Our Lord.
-        </p>
+          The restoration of altar rails addresses a growing desire for greater solemnity in worship.
+            Kneeling remains a profound and humble act of adoration before Our Eucharistic Lord.
+      </p>
         <p>
             Our grant is provided directly to the church to help support these sacred restoration efforts.
         </p>
@@ -51,31 +51,39 @@
 <section class="section light" id="assistance">
     <div class="content">
         <h2>Request Assistance</h2>
-        <p>Please complete the form below and we will respond to you promptly.</p>
-
-        <form action="sendmail.php" method="POST">
-
+                <p>If you are a Pastor or Bishop who is interested in financial assistance for an altar rail project, we encourage you to apply for a grant. Grants are made on an ongoing basis as funds become available. Please fill out the form below to begin the process and learn more.</p>
+<form id="grantRequestForm" action="sendmail.php" method="POST">
+  
     <div class="form-grid">
-        <input type="text" name="contactName" placeholder="Contact Name" required>
-        <input type="email" name="contactEmail" placeholder="Contact Email" required>
-        <input type="tel" name="contactPhone" placeholder="Contact Phone Number" required>
-        <input type="text" name="churchName" placeholder="Church Name" required>
-        <input type="text" name="churchAddress" placeholder="Church Address" required>
-        <input type="tel" name="churchPhone" placeholder="Church Phone Number" required>
-        <input type="text" name="pastorName" placeholder="Pastor's Name" required>
+        <input type="text" name="parishName" placeholder="Name of Parish" required>
 
-        <select name="pastorApproval" required>
-            <option value="">Does the pastor approve of this request?</option>
-            <option>Yes</option>
-            <option>No</option>
+        <input type="text" name="parishAddress" placeholder="Address of Parish" required>
+
+        <input type="text" name="pastorName" placeholder="Name of Pastor" required>
+
+        <input type="text" name="dioceseName" placeholder="Name of Diocese" required>
+
+        <input type="text" name="bishopName" placeholder="Name of Bishop" required>
+
+        <input type="text" name="projectCost" placeholder="About how much do you expect this project to cost?" required>
+
+        <select name="fullAmountRequest" required>
+            <option value="">Are you asking for the full amount?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
         </select>
-    </div>
 
-    <textarea name="bidsInfo" rows="5" placeholder="Provide information on the bids received" required></textarea>
+        <textarea name="otherFunding" rows="4" placeholder="Raising money from other sources allows us to gift to more parishes. Please explain any other funding sources." required></textarea>
+
+        <input type="text" name="contactPerson" placeholder="Name of contact person" required>
+
+        <input type="email" name="contactEmail" placeholder="Email of contact person" required>
+
+        <input type="tel" name="contactPhone" placeholder="Phone number of contact person" required>
+    </div>
 
     <button type="submit">Submit Grant Request</button>
 </form>
-        </form>
 
         <div id="confirmationMessage"></div>
     </div>
