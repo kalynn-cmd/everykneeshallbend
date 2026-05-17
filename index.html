@@ -39,9 +39,9 @@
     <div class="content">
         <h2>Fostering Reverence</h2>
         <p>
-          The restoration of altar rails addresses a growing desire for greater solemnity in worship.
+            The restoration of altar rails addresses a growing desire for greater solemnity in worship.
             Kneeling remains a profound and humble act of adoration before Our Eucharistic Lord.
-      </p>
+        </p>
         <p>
             Our grant is provided directly to the church to help support these sacred restoration efforts.
         </p>
@@ -51,98 +51,102 @@
 <section class="section light" id="assistance">
     <div class="content">
         <h2>Request Assistance</h2>
-                <p>If you are a Pastor or Bishop who is interested in financial assistance for an altar rail project, we encourage you to apply for a grant. Grants are made on an ongoing basis as funds become available. Please fill out the form below to begin the process and learn more.</p>
-<form id="grantRequestForm" action="https://formsubmit.co/ajax/everykneeshallbend@gmail.com" method="POST">
-  <form id="grantRequestForm" action="https://formsubmit.co/ajax/everykneeshallbend@gmail.com" method="POST">
 
-    <input type="hidden" name="_subject" value="New Altar Rail Grant Request">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+        <p>
+            If you are a Pastor or Bishop who is interested in financial assistance for an altar rail project,
+            we encourage you to apply for a grant. Grants are made on an ongoing basis as funds become available.
+            Please fill out the form below to begin the process and learn more.
+        </p>
 
-    <div class="form-grid">
-    <div class="form-grid">
-        <input type="text" name="parishName" placeholder="Name of Parish" required>
+        <form id="grantRequestForm" action="https://formsubmit.co/ajax/everykneeshallbend@gmail.com" method="POST">
 
-        <input type="text" name="parishAddress" placeholder="Address of Parish" required>
+            <input type="hidden" name="_subject" value="New Altar Rail Grant Request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
 
-        <input type="text" name="pastorName" placeholder="Name of Pastor" required>
+            <div class="form-grid">
+                <input type="text" name="Name of Parish" placeholder="Name of Parish" required>
 
-        <input type="text" name="dioceseName" placeholder="Name of Diocese" required>
+                <input type="text" name="Address of Parish" placeholder="Address of Parish" required>
 
-        <input type="text" name="bishopName" placeholder="Name of Bishop" required>
+                <input type="text" name="Name of Pastor" placeholder="Name of Pastor" required>
 
-        <textarea 
-    name="projectCost" 
-    rows="3" 
-    placeholder="About how much do you expect this project to cost?" 
-    required></textarea>
+                <input type="text" name="Name of Diocese" placeholder="Name of Diocese" required>
 
-        <select name="fullAmountRequest" required>
-            <option value="">Are you asking for the full amount?</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
+                <input type="text" name="Name of Bishop" placeholder="Name of Bishop" required>
 
-        <textarea name="otherFunding" rows="4" placeholder="Raising money from other sources allows us to gift to more parishes. Please explain any other funding sources." required></textarea>
+                <textarea 
+                    name="Expected Project Cost" 
+                    rows="3" 
+                    placeholder="About how much do you expect this project to cost?" 
+                    required></textarea>
 
-        <input type="text" name="contactPerson" placeholder="Name of contact person" required>
+                <select name="Asking for Full Amount" required>
+                    <option value="">Are you asking for the full amount?</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
 
-        <input type="email" name="contactEmail" placeholder="Email of contact person" required>
+                <textarea 
+                    name="Other Funding Sources" 
+                    rows="4" 
+                    placeholder="Raising money from other sources allows us to gift to more parishes. Please explain any other funding sources." 
+                    required></textarea>
 
-        <input type="tel" name="contactPhone" placeholder="Phone number of contact person" required>
+                <input type="text" name="Name of Contact Person" placeholder="Name of contact person" required>
+
+                <input type="email" name="email" placeholder="Email of contact person" required>
+
+                <input type="tel" name="Phone Number of Contact Person" placeholder="Phone number of contact person" required>
+            </div>
+
+            <button type="submit">Submit Grant Request</button>
+        </form>
     </div>
 
-    <button type="submit">Submit Grant Request</button>
-</form>
+    <div id="grantPopup" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Thank You</h2>
 
-        <div id="confirmationMessage"></div>
+            <p>
+                Thank you for filling out this information. We will be in touch to ask for additional information
+                and to give you an approximate funding date, such as whether funds are available at this time or
+                whether we are on a waiting list cycle.
+            </p>
+
+            <p>
+                Please note we will need you to gather the following additional information:
+            </p>
+
+            <ul>
+                <li>A letter from the Pastor explaining what he hopes to accomplish in his parish by installing altar rails</li>
+                <li>A letter of support from the local Bishop</li>
+                <li>Any estimates you have received from contractors</li>
+                <li>Pictures of the current church altar area</li>
+                <li>Any mock ups of how it will look after the altar rails are installed</li>
+                <li>Any pictures of altar rails you hope to install</li>
+            </ul>
+
+            <p>Thank you and we will be in touch shortly!</p>
+
+            <p>
+                In general so you know: If you are approved for the grant, money is allocated as invoices come
+                due, so that the church is not given a lump sum at any one time.
+            </p>
+
+            <p>
+                This is not aimed at churches currently under construction. We hope money for altar rails will be
+                raised during their capital campaign.
+            </p>
+
+            <p>
+                We are not able to speak to the media at this time. We are a group of benefactors who want the
+                attention to be on humble devotion to our Eucharistic Lord, not about who we are.
+            </p>
+
+            <button type="button" onclick="closeGrantPopup()">Close</button>
+        </div>
     </div>
-<!-- Popup moved inside the Request Assistance section so it floats over the form -->
-<div id="grantPopup" class="popup-overlay">
-    <div class="popup-box">
-        <h2>Thank You</h2>
-
-        <p>
-            Thank you for filling out this information. We will be in touch to ask for additional information
-            and to give you an approximate funding date, such as whether funds are available at this time or
-            whether we are on a waiting list cycle.
-        </p>
-
-        <p>
-            Please note we will need you to gather the following additional information:
-        </p>
-
-        <ul>
-            <li>A letter from the Pastor explaining what he hopes to accomplish in his parish by installing altar rails</li>
-            <li>A letter of support from the local Bishop</li>
-            <li>Any estimates you have received from contractors</li>
-            <li>Pictures of the current church altar area</li>
-            <li>Any mock ups of how it will look after the altar rails are installed</li>
-            <li>Any pictures of altar rails you hope to install</li>
-        </ul>
-
-        <p>Thank you and we will be in touch shortly!</p>
-
-        <p>
-            In general so you know: If you are approved for the grant, money is allocated as invoices come
-            due, so that the church is not given a lump sum at any one time.
-        </p>
-		
-
-        <p>
-            This is not aimed at churches currently under construction. We hope money for altar rails will be
-            raised during their capital campaign.
-        </p>
-		
-
-        <p>
-            We are not able to speak to the media at this time. We are a group of benefactors who want the
-            attention to be on humble devotion to our Eucharistic Lord, not about who we are.
-        </p>
-
-        <button type="button" onclick="closeGrantPopup()">Close</button>
-    </div>
-</div>
 </section>
 
 <footer>
