@@ -365,3 +365,6 @@ footer {
     background: #c8a951;
     color: #0f1a2b;
 }
+.popup-overlay {
+    display: none;
+}

@@ -5,29 +5,42 @@ document.addEventListener("DOMContentLoaded", function () {
         grantForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
+            const submitButton = grantForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : "Submit Grant Request";
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting...";
+            }
+
             const formData = new FormData(grantForm);
 
-            fetch("sendmail.php", {
+            fetch(grantForm.action, {
                 method: "POST",
-                body: formData
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
             })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Network response was not successful.");
+                    throw new Error("The form could not be submitted.");
                 }
 
-                return response.text();
+                return response.json();
             })
             .then(data => {
-                if (data.trim() === "success") {
-                    openGrantPopup();
-                    grantForm.reset();
-                } else {
-                    alert("There was an error submitting the form. Please try again.");
-                }
+                openGrantPopup();
+                grantForm.reset();
             })
             .catch(error => {
-                alert("There was an error submitting the form. Please try again.");
+                alert("There was an error submitting the form. Please try again or email everykneeshallbend@gmail.com directly.");
+            })
+            .finally(() => {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
             });
         });
     }
@@ -38,7 +51,6 @@ function openGrantPopup() {
 
     if (popup) {
         popup.style.display = "flex";
-        popup.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 }
 
